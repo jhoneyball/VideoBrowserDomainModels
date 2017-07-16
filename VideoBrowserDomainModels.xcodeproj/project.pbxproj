@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0DA0CBDB1F16C4D80035BEE5 /* VideoBrowserDomainModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0CBD11F16C4D80035BEE5 /* VideoBrowserDomainModels.framework */; };
-		0DA0CBE01F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBDF1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.swift */; };
-		0DA0CBE21F16C4D80035BEE5 /* VideoBrowserDomainModels.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA0CBD41F16C4D80035BEE5 /* VideoBrowserDomainModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DA0CBED1F16C5E40035BEE5 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBEB1F16C5E40035BEE5 /* VideoItem.swift */; };
+		0DA0CBEE1F16C5E40035BEE5 /* VideoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBEC1F16C5E40035BEE5 /* VideoItemStore.swift */; };
+		0DA0CBF21F1A851A0035BEE5 /* VideoItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF11F1A851A0035BEE5 /* VideoItemTest.swift */; };
+		0DA0CBF41F1B80F60035BEE5 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF31F1B80F60035BEE5 /* ImageItem.swift */; };
+		0DA0CBF61F1BCE980035BEE5 /* ImageItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF51F1BCE980035BEE5 /* ImageItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +27,15 @@
 
 /* Begin PBXFileReference section */
 		0DA0CBD11F16C4D80035BEE5 /* VideoBrowserDomainModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VideoBrowserDomainModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DA0CBD41F16C4D80035BEE5 /* VideoBrowserDomainModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoBrowserDomainModels.h; sourceTree = "<group>"; };
 		0DA0CBD51F16C4D80035BEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA0CBDA1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoBrowserDomainModelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DA0CBDF1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBrowserDomainModelsTests.swift; sourceTree = "<group>"; };
 		0DA0CBE11F16C4D80035BEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA0CBEB1F16C5E40035BEE5 /* VideoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
+		0DA0CBEC1F16C5E40035BEE5 /* VideoItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoItemStore.swift; sourceTree = "<group>"; };
+		0DA0CBF11F1A851A0035BEE5 /* VideoItemTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoItemTest.swift; sourceTree = "<group>"; };
+		0DA0CBF31F1B80F60035BEE5 /* ImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageItem.swift; path = ../ImageItem.swift; sourceTree = "<group>"; };
+		0DA0CBF51F1BCE980035BEE5 /* ImageItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageItemStore.swift; sourceTree = "<group>"; };
+		0DA0CC241F1BDD3C0035BEE5 /* VideoBrowserDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoBrowserDataSources.framework; path = "../VideoBrowserDataSources/build/Debug-iphoneos/VideoBrowserDataSources.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 				0DA0CBD31F16C4D80035BEE5 /* VideoBrowserDomainModels */,
 				0DA0CBDE1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests */,
 				0DA0CBD21F16C4D80035BEE5 /* Products */,
+				0DA0CBF71F1BD9A70035BEE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +79,10 @@
 		0DA0CBD31F16C4D80035BEE5 /* VideoBrowserDomainModels */ = {
 			isa = PBXGroup;
 			children = (
-				0DA0CBD41F16C4D80035BEE5 /* VideoBrowserDomainModels.h */,
+				0DA0CBF31F1B80F60035BEE5 /* ImageItem.swift */,
+				0DA0CBF51F1BCE980035BEE5 /* ImageItemStore.swift */,
+				0DA0CBEB1F16C5E40035BEE5 /* VideoItem.swift */,
+				0DA0CBEC1F16C5E40035BEE5 /* VideoItemStore.swift */,
 				0DA0CBD51F16C4D80035BEE5 /* Info.plist */,
 			);
 			path = VideoBrowserDomainModels;
@@ -80,10 +91,18 @@
 		0DA0CBDE1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DA0CBDF1F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.swift */,
 				0DA0CBE11F16C4D80035BEE5 /* Info.plist */,
+				0DA0CBF11F1A851A0035BEE5 /* VideoItemTest.swift */,
 			);
 			path = VideoBrowserDomainModelsTests;
+			sourceTree = "<group>";
+		};
+		0DA0CBF71F1BD9A70035BEE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DA0CC241F1BDD3C0035BEE5 /* VideoBrowserDataSources.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +112,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA0CBE21F16C4D80035BEE5 /* VideoBrowserDomainModels.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,11 +167,13 @@
 					0DA0CBD01F16C4D80035BEE5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = EF4UQ57PCN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					0DA0CBD91F16C4D80035BEE5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = EF4UQ57PCN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -198,6 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA0CBF41F1B80F60035BEE5 /* ImageItem.swift in Sources */,
+				0DA0CBEE1F16C5E40035BEE5 /* VideoItemStore.swift in Sources */,
+				0DA0CBED1F16C5E40035BEE5 /* VideoItem.swift in Sources */,
+				0DA0CBF61F1BCE980035BEE5 /* ImageItemStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA0CBE01F16C4D80035BEE5 /* VideoBrowserDomainModelsTests.swift in Sources */,
+				0DA0CBF21F1A851A0035BEE5 /* VideoItemTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +287,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = "/Users/jhoneyball/Documents/Development/VideoBrowserDataSources/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -311,6 +336,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = "/Users/jhoneyball/Documents/Development/VideoBrowserDataSources/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -324,6 +350,7 @@
 		0DA0CBE61F16C4D80035BEE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
@@ -336,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.VideoBrowserDomainModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +371,7 @@
 		0DA0CBE71F16C4D80035BEE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
@@ -362,11 +391,14 @@
 		0DA0CBE91F16C4D80035BEE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = VideoBrowserDomainModelsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.VideoBrowserDomainModelsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -374,6 +406,8 @@
 		0DA0CBEA1F16C4D80035BEE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = VideoBrowserDomainModelsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +436,7 @@
 				0DA0CBE71F16C4D80035BEE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA0CBE81F16C4D80035BEE5 /* Build configuration list for PBXNativeTarget "VideoBrowserDomainModelsTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +445,7 @@
 				0DA0CBEA1F16C4D80035BEE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
