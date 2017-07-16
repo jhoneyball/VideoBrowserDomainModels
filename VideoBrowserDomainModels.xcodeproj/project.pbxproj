@@ -13,7 +13,6 @@
 		0DA0CBF21F1A851A0035BEE5 /* VideoItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF11F1A851A0035BEE5 /* VideoItemTest.swift */; };
 		0DA0CBF41F1B80F60035BEE5 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF31F1B80F60035BEE5 /* ImageItem.swift */; };
 		0DA0CBF61F1BCE980035BEE5 /* ImageItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CBF51F1BCE980035BEE5 /* ImageItemStore.swift */; };
-		0DA0CC271F1BE51B0035BEE5 /* VideoBrowserDomainModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0CC261F1BE51B0035BEE5 /* VideoBrowserDomainModelsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		0DA0CBF31F1B80F60035BEE5 /* ImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageItem.swift; path = ../ImageItem.swift; sourceTree = "<group>"; };
 		0DA0CBF51F1BCE980035BEE5 /* ImageItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageItemStore.swift; sourceTree = "<group>"; };
 		0DA0CC241F1BDD3C0035BEE5 /* VideoBrowserDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoBrowserDataSources.framework; path = "../VideoBrowserDataSources/build/Debug-iphoneos/VideoBrowserDataSources.framework"; sourceTree = "<group>"; };
-		0DA0CC261F1BE51B0035BEE5 /* VideoBrowserDomainModelsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoBrowserDomainModelsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 			children = (
 				0DA0CBE11F16C4D80035BEE5 /* Info.plist */,
 				0DA0CBF11F1A851A0035BEE5 /* VideoItemTest.swift */,
-				0DA0CC261F1BE51B0035BEE5 /* VideoBrowserDomainModelsTests.swift */,
 			);
 			path = VideoBrowserDomainModelsTests;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA0CC271F1BE51B0035BEE5 /* VideoBrowserDomainModelsTests.swift in Sources */,
 				0DA0CBF21F1A851A0035BEE5 /* VideoItemTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
