@@ -1,13 +1,12 @@
 //
 //  VideoBrowserDomainModelsTests.swift
-//  VideoBrowserDomainModelsTests
+//  VideoBrowserDomainModels
 //
-//  Created by James Honeyball on 12/07/2017.
+//  Created by James Honeyball on 16/07/2017.
 //  Copyright © 2017 James Honeyball. All rights reserved.
 //
 
 import XCTest
-@testable import VideoBrowserDomainModels
 
 class VideoBrowserDomainModelsTests: XCTestCase {
     
