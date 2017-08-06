@@ -11,7 +11,18 @@ import UIKit
 public class ImageItemStore {
     
     private var imageItemDictionary: [ImageUUID: ImageItem] = [ImageUUID: ImageItem]()
+    private var lowResLoadingQueue = OperationQueue()
+    private var bestResLoadingQueue = OperationQueue()
 
+    init() {
+        lowResLoadingQueue.maxConcurrentOperationCount = 1
+        bestResLoadingQueue.maxConcurrentOperationCount = 1
+        lowResLoadingQueue.qualityOfService = .userInitiated
+        bestResLoadingQueue.qualityOfService = .default
+        
+        
+    }
+    
     func new () -> ImageUUID {
         let imageItem: ImageItem = ImageItemStruct()
         let hashValue: ImageUUID = UUID().hashValue
@@ -34,7 +45,10 @@ public class ImageItemStore {
         
         let dataTask = urlSession.dataTask(with: urlRequest)
         {(data, urlResponse, error) in
-            if let image = UIImage(data: data!) {
+            if error != nil {
+                print("Error \(error!.localizedDescription )")
+            } else if data != nil {
+                let image = UIImage(data: data!)
                 self.imageItemDictionary.updateValue(ImageItemStruct(image: image), forKey: hashValue)
             }
             completion()
@@ -55,3 +69,15 @@ public typealias ImageUUID = Int
 struct ImageItemStruct: ImageItem {
     var image: UIImage?
 }
+
+
+class loadImageOperation: Operation {
+    
+    
+    
+    
+    override func main() {
+        print ("Loading image")
+    }
+}
+
