@@ -12,34 +12,30 @@ public class VideoItemStore {
         case file
     }
     
-    public init?(from: ResourceType, with location: String) {
-        
-        let videoJSONFeed = VideoJSONFeed(fromFile: "Feed", ofType: "json", in: Bundle.main)!
-        
-        if let videoItemsParser = VideoJSONParser(from: videoJSONFeed.theJSONData) {
-            for videoDataItem in videoItemsParser.videoDataItems {
-                
-                let bestImageUUID = imageItemStore.new()
-                let smallImageUUID = imageItemStore.new()
-                
-                let videoItem = VideoItemClass(title: videoDataItem.title,
-                                                synopsis: videoDataItem.synopsis,
-                                                broadcastChannel: videoDataItem.broadcastChannel,
-                                                imageItemStore: imageItemStore,
-                                                bestImageItemStoreUUID: bestImageUUID,
-                                                smallImageItemStoreUUID: smallImageUUID)
-                videoItems.append(videoItem as VideoItem)
-                
-                let bestImageURL = getImageURL(videoDataItem.imageURLs, for: URLImageResolution(640))
-                let smallImageURL = getImageURL(videoDataItem.imageURLs, for: URLImageResolution(0))
-                if smallImageURL != bestImageURL {
-                    imageItemStore.update(smallImageUUID, imageURL: smallImageURL, completion: {imageForItemHasLoaded(videoItem)})
-                }
-                imageItemStore.update(bestImageUUID, imageURL: bestImageURL, completion: {imageForItemHasLoaded(videoItem)})
+    public init?(from videoDataItems: [VideoDataItem]) {
+        for videoDataItem in videoDataItems {
+            
+            let bestImageUUID = imageItemStore.new()
+            let smallImageUUID = imageItemStore.new()
+            
+            let videoItem = VideoItemClass(title: videoDataItem.title,
+                                           synopsis: videoDataItem.synopsis,
+                                           broadcastChannel: videoDataItem.broadcastChannel,
+                                           imageItemStore: imageItemStore,
+                                           bestImageItemStoreUUID: bestImageUUID,
+                                           smallImageItemStoreUUID: smallImageUUID)
+            videoItems.append(videoItem as VideoItem)
+            
+            let bestImageURL = getImageURL(videoDataItem.imageURLs, for: URLImageResolution(640))
+            let smallImageURL = getImageURL(videoDataItem.imageURLs, for: URLImageResolution(0))
+            if smallImageURL != bestImageURL {
+                imageItemStore.update(smallImageUUID, imageURL: smallImageURL, size: .small, completion: {imageForItemHasLoaded(videoItem)})
             }
+            imageItemStore.update(bestImageUUID, imageURL: bestImageURL, size: .best, completion: {imageForItemHasLoaded(videoItem)})
         }
     }
 }
+
 
 class VideoItemClass: VideoItem {
     var title: String
@@ -70,7 +66,9 @@ class VideoItemClass: VideoItem {
     }
     
     func escalateImageLoad() {
-        print("Escalated image load for: \(self.title)")
+        print("***** Escalating load of \(self.title)")
+        imageItemStore.escalateSmall(self.smallImageItemStoreUUID)
+        imageItemStore.escalateBest(self.bestImageItemStoreUUID)
     }
 }
 
@@ -113,4 +111,5 @@ func getImageURL(_ imageURLs: [ImageURLDetails], for resolution: URLImageResolut
 
 func imageForItemHasLoaded(_ videoItem: VideoItem) -> Void {
     videoItem.delegate?.delegateAlertForImageLoaded()
+    print("Got an image for \(videoItem.title)")
 }
