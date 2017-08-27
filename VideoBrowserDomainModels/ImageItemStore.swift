@@ -20,7 +20,7 @@ public class ImageItemStore {
     private var LowPritoityLoadingQueue = OperationQueue()
 
     init() {
-        highPritoityLoadingQueue.maxConcurrentOperationCount = 1
+        highPritoityLoadingQueue.maxConcurrentOperationCount = 3
         LowPritoityLoadingQueue.maxConcurrentOperationCount = 1
         highPritoityLoadingQueue.qualityOfService = .userInitiated
         LowPritoityLoadingQueue.qualityOfService = .default
